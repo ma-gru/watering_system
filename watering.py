@@ -13,9 +13,9 @@ GPIO.setmode(GPIO.BCM)
 # Define parameters
 ###########################################################
 
-l_Pods = ['Salat'] #, 'Gurke'] #, 'Zucchini', 'Salat', 'Kraeuter', 'Apfel', 'Petersilie', 'Moehren']
-l_GPIO = [24] #, 24] #, 23, 24, 25, 12, 16, 20, 21] # select all GPIOs to use
-l_watering_duration = [8] #, 8] #, 3, 3, 3, 3, 3, 3, 3]
+l_Pods = ['Salat', 'Gurke', 'Moehren', 'Zucchini', 'Petersilie']
+l_GPIO = [18, 23, 20, 16, 21] #, 24] #, 23, 24, 25, 12, 16, 20, 21] # select all GPIOs to use
+l_watering_duration = [10, 15, 10, 10, 10] #, 8] #, 3, 3, 3, 3, 3, 3, 3]
 
 sleep_time = 1
 
@@ -38,12 +38,11 @@ for i in l_GPIO:
 
 ### Iterate through pods
 
-time.sleep(2)
 print('Start watering')
 
 try:
 	for pod, gp, duration in zip(l_Pods, l_GPIO, l_watering_duration):
-		print("Watering:", pod)
+		print("Watering:", pod, gp)
 		start_time = datetime.now()
 		file_object.write('\n')
 		file_object.write('\n' + str(start_time) + ': Watering: '+ str(pod))

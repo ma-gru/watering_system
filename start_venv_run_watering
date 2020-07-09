@@ -1,0 +1,4 @@
+#!/bin/bash
+source /home/pi/watering_system/bin/activate
+cd /home/pi/python_repositories/watering_system/
+python ./watering.py
