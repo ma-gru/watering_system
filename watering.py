@@ -14,8 +14,8 @@ GPIO.setmode(GPIO.BCM)
 ###########################################################
 
 l_Pods = ['Salat', 'Gurke', 'Moehren', 'Zucchini', 'Petersilie']
-l_GPIO = [18, 23, 20, 16, 21] #, 24] #, 23, 24, 25, 12, 16, 20, 21] # select all GPIOs to use
-l_watering_duration = [10, 15, 10, 10, 10] #, 8] #, 3, 3, 3, 3, 3, 3, 3]
+l_GPIO = [18, 23, 20, 16, 21] # select all GPIOs to use
+l_watering_duration = [7, 12, 7, 7, 7] # select watering durations in seconds
 
 sleep_time = 1
 
